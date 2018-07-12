@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather app</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+  
+  
+</head>
+
+
+
+  <body ng-app="weatherApp" ng-controller="weatherCtrl">
+  <div class="container">
+  <h2 style="text-align: center;">{{heading}}</h2>
+      
+      <form ng-submit="wthrAp()" style="text-align: center;">
+  Lattitude:<br>
+  <input type="text" ng-model="lat">
+  <br>
+  Longitude:<br>
+  <input type="text" ng-model="lon">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+ 
+     <h4 style="text-align: center;">Lattitude and Longitude: {{fullName()}}</h4> 
+      
+      <table id="tab">
+  <tr>
+    <th>Country</th>
+    <th>{{con}}</th>
+  </tr>
+  <tr>
+    <td>Weather Condition</td>
+    <td>{{description}}</td>
+    
+  </tr>
+  <tr>
+    <td>Temperature</td>
+    <td>{{tempp}}</td>
+    
+  </tr>
+  <tr>
+    <td>Pressure</td>
+    <td>{{press}}</td>
+    
+  </tr>
+  <tr>
+    <td>Humidity</td>
+    <td>{{hum}}</td>
+    
+  </tr>
+  <tr>
+    <td>Wind Speed</td>
+    <td>{{wind}}</td>
+    
+  </tr>
+  <tr>
+    <td>Sea Level</td>
+    <td>{{sea}}</td>
+    
+  </tr>
+</table>
+  
+  
+ </div> 
+      
+      
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js'></script>
+  <script  src="js/index.js"></script>
+</body>
+
+</html>
